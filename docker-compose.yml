@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  web:
+    build: ./.build/web/
+    container_name: pingcrm
+    ports:
+      - "8854:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      APP_ENV: development
